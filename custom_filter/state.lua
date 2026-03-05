@@ -59,8 +59,9 @@ end
 function state:switch_to(subtitle_track)
     self:save_history()
 
-    if subtitle_track and self.history:get(subtitle_track) then
-        self:restore_data(self.history:get(subtitle_track))
+    local cached_data = self.history:get(subtitle_track)
+    if subtitle_track and cached_data then
+        self:restore_data(cached_data)
     else
         self:reset_scores()
     end

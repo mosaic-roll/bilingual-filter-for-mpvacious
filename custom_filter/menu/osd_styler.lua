@@ -1,8 +1,6 @@
 local mp = require('mp')
 
-local OSD = {
-    parts = {} -- 存储生成的 ASS 片段
-}
+local OSD = {}
 
 -- 预设颜色常量 (RRGGBB 格式)
 OSD.colors = {
